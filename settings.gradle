@@ -1,0 +1,3 @@
+rootProject.name='asmnt'
+include 'asmnt-sb'
+include 'asmnt-sb-test'
