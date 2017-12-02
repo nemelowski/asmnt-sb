@@ -23,4 +23,4 @@ VOLUME /tmp
 ARG JAR_FILE
 ADD ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/asmnt-sb/build/libs/asmnt-sb-1.0.jar"]
-CMD ["--help"]
+CMD gunicorn --bind 0.0.0.0:$PORT wsgi
